@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>IPL has started</title>
+    <title>DevSecOps course</title>
 
 
     <!-- Custom styles for this template -->
