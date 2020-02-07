@@ -13,7 +13,7 @@ pipeline {
            '''
       }
     }
-    
+   
     stage ('Check-Git-secrets') {
       steps {
         sh 'rm trufflehog || true'
