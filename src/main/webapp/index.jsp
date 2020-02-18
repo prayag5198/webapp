@@ -9,7 +9,6 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>DevSecOps course</title>
-    <p1>AWS_KEY=lsvwenvo23nddsk9</p1>
 
 
     <!-- Custom styles for this template -->
