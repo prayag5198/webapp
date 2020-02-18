@@ -16,13 +16,13 @@ pipeline {
    
     stage ('Check-Git-secrets') {
       steps {
-        sh 'rm trufflehog || true'
-        sh 'docker run gesellix/trufflehog --json https://github.com/prayag5198/webapp.git > trufflehog'
-        sh 'cat trufflehog'
+        sh 'rm gitleaks || true'
+        sh 'docker run zricethezav/gitleaks -v --pretty --branch=windows -r https://github.com/prayag5198/webapp.git > gitleaks'
+        sh 'cat gitleaks'
       }
     }
     
-    stage ('Source-Composition-Analysis') {
+    /*stage ('Source-Composition-Analysis') {
       steps {
         sh 'rm owasp* || true'
         sh 'wget "https://raw.githubusercontent.com/prayag5198/webapp/master/owasp-dependency-check.sh" '
@@ -38,7 +38,7 @@ pipeline {
           sh 'cat target/sonar/report-task.txt'
         }
       }
-    }
+    }*/
     
     stage ('Build') {
       steps {
