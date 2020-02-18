@@ -9,6 +9,7 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>DevSecOps course</title>
+    <p1>AWS_key = JNDKSHNS2NJN2</p1>
 
 
     <!-- Custom styles for this template -->
