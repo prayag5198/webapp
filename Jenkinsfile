@@ -14,7 +14,7 @@ pipeline {
       }
     }
    
-    stage ('Check-Git-secrets') {
+   /* stage ('Check-Git-secrets') {
       steps {
         sh 'rm trufflehog || true'
         sh 'docker run gesellix/trufflehog --json https://github.com/prayag5198/webapp.git > trufflehog'
@@ -29,7 +29,7 @@ pipeline {
         sh 'chmod +x owasp-dependency-check.sh'
         sh 'bash owasp-dependency-check.sh'
       }
-    }
+    }*/
     
     /*stage ('SAST') {
       steps {
@@ -46,12 +46,12 @@ pipeline {
       }
     }
     
-    stage ('Deploy-To-Tomcat') {
+   /* stage ('Deploy-To-Tomcat') {
       steps {
         sshagent(['tomcat']) {
           sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@3.12.111.119:/prod/apache-tomcat-8.5.50/webapps/webapp.war'
         }
       }
-    }
+    }*/
   }
 }
