@@ -14,22 +14,22 @@ pipeline {
       }
     }
    
-   /* stage ('Check-Git-secrets') {
+    stage ('Check-Git-secrets') {
       steps {
         sh 'rm trufflehog || true'
         sh 'docker run gesellix/trufflehog --json https://github.com/prayag5198/webapp.git > trufflehog'
         sh 'cat trufflehog'
       }
-    }*/
+    }
     
-    stage ('Source-Composition-Analysis') {
+    /*stage ('Source-Composition-Analysis') {
       steps {
         sh 'rm owasp* || true'
         sh 'wget "https://raw.githubusercontent.com/prayag5198/webapp/master/owasp-dependency-check.sh" '
         sh 'chmod +x owasp-dependency-check.sh'
         sh 'bash owasp-dependency-check.sh'
       }
-    }
+    }*/
     
     /*stage ('SAST') {
       steps {
