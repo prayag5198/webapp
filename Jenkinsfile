@@ -46,12 +46,12 @@ pipeline {
       }
     }
     
-   /* stage ('Deploy-To-Tomcat') {
+    stage ('Deploy-To-Tomcat') {
       steps {
         sshagent(['tomcat']) {
           sh 'scp -o StrictHostKeyChecking=no target/*.war anybody@blrl92465.iis.amadeus.net:/prod/apache-tomcat-8.5.50/webapps/webapp.war'
         }
       }
-    }*/
+    }
   }
 }
