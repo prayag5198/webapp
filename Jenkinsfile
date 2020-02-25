@@ -20,9 +20,9 @@ pipeline {
         sh 'docker run gesellix/trufflehog --json https://github.com/prayag5198/webapp.git > trufflehog'
         sh 'cat trufflehog'
       }
-    }
+    }*/
     
-    stage ('Source-Composition-Analysis') {
+    /*stage ('Source-Composition-Analysis') {
       steps {
         sh 'rm owasp* || true'
         sh 'wget "https://raw.githubusercontent.com/prayag5198/webapp/master/owasp-dependency-check.sh" '
