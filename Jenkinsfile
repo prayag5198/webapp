@@ -47,13 +47,6 @@ pipeline {
       }
     }
     
-    /*stage ('Deploy-To-Tomcat') {
-      steps {
-        sshagent(['tomcat']) {
-          sh 'scp -o StrictHostKeyChecking=no target/*.war anybody@blrl92465.iis.amadeus.net:/prod/apache-tomcat-8.5.50/webapps/webapp.war'
-        }
-      }
-    }*/
     stage('Deploy') {
             steps {
                deploy adapters: [tomcat9(credentialsId: '7d96ddda-581c-45b0-946f-ea885bf11c32', path: '', url: 'http://localhost:8000/')], contextPath: 'devsecops', war: '**/*.war'
