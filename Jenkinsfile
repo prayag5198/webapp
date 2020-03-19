@@ -49,12 +49,12 @@ pipeline {
     
     stage('Deploy') {
       steps {
-        deploy adapters: [tomcat9(credentialsId: '7d96ddda-581c-45b0-946f-ea885bf11c32', path: '', url: 'http://localhost:8000/')], contextPath: 'devsecops', war: '**/*.war'
+        deploy adapters: [tomcat9(credentialsId: '7d96ddda-581c-45b0-946f-ea885bf11c32', path: '', url: 'http://18.222.171.128:8000/')], contextPath: 'devsecops', war: '**/*.war'
         }
     }
     stage('DAST') {
       steps {
-        sh 'docker run -t owasp/zap2docker-stable zap-baseline.py -t http://localhost:8000/devsecops/'
+        sh 'docker run -t owasp/zap2docker-stable zap-baseline.py -t http://18.222.171.128:8000/devsecops/'
       }
     }
   }
